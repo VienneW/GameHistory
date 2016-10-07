@@ -17,3 +17,13 @@ connection.java in RobynTest (calling the function in GameRoomAdaptor.java)
 SlotgameGameCycle.java in igaming-chatapp-mybatis (calling the function in SlotgameGameCycleMapper.java)
 SlotgameGameCycleMapper.java in igaming-chatapp-mybatis (mapping to sql statements in SlotgameGameCycleMapper.xml )
 SlotgameGameCycleMapper.xml in igaming-chatapp-mybatis
+
+PS: when I was trying to test in main of mybatis, one of the columns I have to get is a JSON String but what I want is JSONObject, so I had to import JSONParser by adding this line:
+
+compileOnly 'com.googlecode.json-simple:json-simple:1.1.1'
+
+in build.gradle, and add these 2 lines in main,
+
+import org.json.simple.parser.ParseException;
+import org.json.simple.parser.JSONParser;
+
